@@ -4,12 +4,12 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, Zap, CodeXml, Database, ShieldCheck, Cpu, Server, Lock, Layers } from "lucide-react";
 
-const fadeUp = {
+const fadeUp: any = {
   hidden: { opacity: 0, y: 50, scale: 0.95 },
   visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.8, ease: "easeOut" } }
 };
 
-const staggerContainer = {
+const staggerContainer: any = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
