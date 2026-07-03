@@ -20,7 +20,7 @@ const stagger: any = {
   visible: { opacity: 1, transition: { staggerChildren: 0.15 } }
 };
 
-const badgeVariants = {
+const badgeVariants: any = {
   rest: { scale: 1, y: 0, boxShadow: "0 0 0px rgba(0,0,0,0)", backgroundColor: "rgba(0,0,0,0.5)" },
   hover: {
     scale: 1.08,
@@ -32,7 +32,7 @@ const badgeVariants = {
   }
 };
 
-const iconMotion = {
+const iconMotion: any = {
   rest: { rotate: 0 },
   hover: { rotate: [0, -15, 15, -15, 0], transition: { duration: 0.5, ease: "easeInOut" } }
 };
