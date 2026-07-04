@@ -9,7 +9,7 @@ export function Footer() {
             </li>
           </ul>
         </nav>
-        <p className="text-sm">Built with Struggle and Patience by <a href="https://github.com/balavignesh16" className="text-white hover:underline">Bala Vignesh R</a></p>
+
         <p className="text-xs text-center">© {new Date().getFullYear()} Bala Vignesh R. All rights reserved.</p>
       </div>
     </footer>
