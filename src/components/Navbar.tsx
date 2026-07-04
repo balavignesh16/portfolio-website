@@ -65,7 +65,7 @@ export function Navbar() {
         {/* Resume Button */}
         <div className="pl-2 ml-2 border-l border-white/10 hidden sm:block">
           <a
-            href="https://drive.google.com/file/d/1xxKMbb3fXVYUBEzaev51qa-VK1OVnu9P/view?usp=sharing"
+            href="https://drive.google.com/file/d/1oERQDI5s28-827fnoUL49KrTqK5nXpsp/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-4 py-2 text-sm font-bold text-amber-500 rounded-full border border-amber-500/30 hover:bg-amber-500 hover:text-zinc-950 transition-all duration-300 shadow-[0_0_15px_rgba(245,158,11,0.15)] hover:shadow-[0_0_20px_rgba(245,158,11,0.4)] group"
