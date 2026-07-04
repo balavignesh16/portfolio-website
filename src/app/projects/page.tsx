@@ -1,6 +1,6 @@
 "use client";
 
-import { ExternalLink, Search, Filter, Code2, Activity, GitCommitHorizontal, X } from "lucide-react";
+import { ExternalLink, Code2, Activity, GitCommitHorizontal, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { useState, useEffect } from "react";
@@ -17,7 +17,7 @@ const stagger: any = {
 };
 
 export default function Projects() {
-  const [searchQuery, setSearchQuery] = useState("");
+
   const [selectedProject, setSelectedProject] = useState<any | null>(null);
 
   // Prevent scrolling when modal is open
@@ -106,11 +106,6 @@ export default function Projects() {
     }
   ];
 
-  const filteredProjects = allProjects.filter(project =>
-    project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    project.stack.some(tech => tech.toLowerCase().includes(searchQuery.toLowerCase())) ||
-    project.description.toLowerCase().includes(searchQuery.toLowerCase())
-  );
 
   return (
     <div className="min-h-screen pt-24 pb-24 sm:px-6 lg:px-8 font-sans">
@@ -150,28 +145,12 @@ export default function Projects() {
             </div>
           </div>
 
-          {/* Search and Filter */}
-          <div className="flex flex-col sm:flex-row gap-4 w-full max-w-lg mx-auto mb-16">
-            <div className="relative flex-grow">
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-500" />
-              <input
-                type="text"
-                placeholder="Search projects by name, tech, or description..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full bg-[#0d1117] border border-white/10 rounded-full pl-11 pr-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-amber-500/50 transition-all text-white placeholder-zinc-500"
-              />
-            </div>
-            <button className="flex items-center justify-center gap-2 px-6 py-3 bg-[#0d1117] border border-white/10 rounded-full text-sm font-medium text-zinc-300 hover:bg-white/5 transition-colors whitespace-nowrap">
-              <Filter className="w-4 h-4" />
-              <span>Filter by Topic</span>
-            </button>
-          </div>
+
         </motion.div>
 
         {/* Grid Section */}
         <motion.div variants={stagger} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
-          {filteredProjects.map((project, idx) => (
+          {allProjects.map((project, idx) => (
             <motion.div
               key={idx}
               variants={fadeUp}
