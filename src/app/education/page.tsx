@@ -60,9 +60,9 @@ export default function Education() {
               <span className="inline-block w-max px-3 py-1 bg-amber-500/10 text-amber-500 text-sm font-semibold rounded-full mt-2 xl:mt-0 border border-amber-500/20">Jun 2025 – Jul 2025</span>
             </div>
             <ul className="list-none mt-6 space-y-3 text-zinc-300 text-lg">
-              <li className="flex gap-3"><span className="text-amber-500 mt-1 font-bold">▹</span>Completed one-month backend internship focused on Golang development.</li>
-              <li className="flex gap-3"><span className="text-amber-500 mt-1 font-bold">▹</span>Developed backend modules using Go under the guidance of the development team.</li>
-              <li className="flex gap-3"><span className="text-amber-500 mt-1 font-bold">▹</span>Collaborated with engineers to understand backend architecture and industry development practices.</li>
+              <li className="flex gap-3"><span className="text-amber-500 mt-1 font-bold">▹</span>Completed an intensive one-month technical onboarding program focused on Golang and backend software engineering principles.</li>
+              <li className="flex gap-3"><span className="text-amber-500 mt-1 font-bold">▹</span>Developed core proficiency in Go syntax, data structures, and standard libraries through structured enterprise curriculum and hands-on exercises.</li>
+              <li className="flex gap-3"><span className="text-amber-500 mt-1 font-bold">▹</span>Strengthened algorithmic problem-solving and optimization skills by implementing efficient data structures and algorithms in Go.</li>
             </ul>
           </motion.div>
         </div>
