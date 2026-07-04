@@ -196,12 +196,7 @@ export default function Projects() {
             </motion.div>
           ))}
 
-          {/* No Results State */}
-          {filteredProjects.length === 0 && (
-            <div className="col-span-full py-12 text-center text-zinc-500">
-              No projects found matching "{searchQuery}"
-            </div>
-          )}
+
         </motion.div>
       </motion.div>
 
