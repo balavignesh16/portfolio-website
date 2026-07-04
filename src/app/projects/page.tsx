@@ -44,16 +44,16 @@ export default function Projects() {
       ]
     },
     {
-      title: "ESP32 Gas Follower Robot",
-      repo: "",
-      imageFallback: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop",
-      stack: ["ESP32", "C++", "WebSocket", "HTML", "CSS", "JavaScript"],
-      github: "",
-      description: "Autonomous gas leak localization robot using an ESP32 microcontroller with a real-time WebSocket dashboard for live telemetry and manual teleoperation.",
+      title: "HotReload: High-Performance Utility",
+      repo: "hotreload",
+      imageFallback: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop",
+      stack: ["Go", "CLI", "File System Monitoring"],
+      github: "https://github.com/balavignesh16/hotreload",
+      description: "Lightweight, highly-performant live-reloading developer utility written purely in Go for instant server restarts.",
       fullDescription: [
-        "Built an autonomous gas leak localization robot using an ESP32 microcontroller with a three-sensor MQ gas array.",
-        "Developed a real-time WebSocket dashboard supporting live telemetry, 2D radar visualization and manual W-A-S-D teleoperation.",
-        "Achieved an average communication latency of 42 ms across 1,000 test runs and implemented autonomous danger-state navigation."
+        "Engineered a lightweight and highly-performant live-reloading developer utility written purely in Go.",
+        "Implemented native cross-platform file system monitoring to automatically detect directory changes and instantly restart servers.",
+        "Drastically improved development workflows by providing instant feedback loops and eliminating manual server restarts."
       ]
     },
     {
