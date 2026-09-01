@@ -80,18 +80,7 @@ export default function Projects() {
         "Optimized cross-platform performance for both Android and iOS environments."
       ]
     },
-    {
-      title: "HotReload",
-      repo: "hotreload",
-      stack: ["Go", "CLI", "File System"],
-      github: "https://github.com/balavignesh16/hotreload",
-      description: "Lightweight, highly-performant live-reloading utility written in Go. Implements native file system monitoring for instant server restarts.",
-      fullDescription: [
-        "Engineered a lightweight and efficient live-reloading utility written in Go for maximum performance.",
-        "Implemented native cross-platform file system monitoring to automatically detect changes and restart servers.",
-        "Drastically improved development workflows by providing instant feedback loops."
-      ]
-    },
+
     {
       title: "EventSphere",
       repo: "eventsphere",
@@ -106,6 +95,41 @@ export default function Projects() {
     }
   ];
 
+  const inProgressProjects = [
+    {
+      title: "Atlas",
+      repo: "atlas",
+      stack: ["In Progress"],
+      github: "https://github.com/balavignesh16/atlas",
+      description: "Currently in development.",
+      fullDescription: [
+        "This project is currently under active development."
+      ],
+      imageFallback: "https://images.unsplash.com/photo-1618477247222-ac60c8856bbd?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      title: "Nexus",
+      repo: "nexus",
+      stack: ["In Progress"],
+      github: "https://github.com/balavignesh16/nexus",
+      description: "Currently in development.",
+      fullDescription: [
+        "This project is currently under active development."
+      ],
+      imageFallback: "https://images.unsplash.com/photo-1618477247222-ac60c8856bbd?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      title: "Last Mile Delivery Tracker",
+      repo: "last-mile-delivery-tracker",
+      stack: ["In Progress"],
+      github: "https://github.com/balavignesh16/last-mile-delivery-tracker",
+      description: "Tracking solution for last mile delivery operations.",
+      fullDescription: [
+        "This project is currently under active development."
+      ],
+      imageFallback: "https://images.unsplash.com/photo-1618477247222-ac60c8856bbd?q=80&w=800&auto=format&fit=crop"
+    }
+  ];
 
   return (
     <div className="min-h-screen pt-24 pb-24 sm:px-6 lg:px-8 font-sans">
@@ -197,6 +221,67 @@ export default function Projects() {
           ))}
 
 
+        </motion.div>
+
+        {/* Header Section for In Progress */}
+        <motion.div variants={fadeUp} className="flex flex-col items-center text-center mt-24 mb-12 w-full">
+          <div className="flex items-center gap-4 mb-2">
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white">
+              In Progress / Currently Working
+            </h2>
+          </div>
+          <p className="max-w-2xl text-zinc-400 text-base leading-relaxed">
+            Projects that are currently under active development.
+          </p>
+        </motion.div>
+
+        {/* Grid Section for In Progress */}
+        <motion.div variants={stagger} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+          {inProgressProjects.map((project, idx) => (
+            <motion.div
+              key={`in-progress-${idx}`}
+              variants={fadeUp}
+              onClick={() => setSelectedProject(project)}
+              className="flex flex-col bg-[#0d1117] border border-white/10 rounded-2xl overflow-hidden hover:border-amber-500/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-amber-500/10 cursor-pointer group"
+            >
+              {/* GitHub Open Graph Image Wrapper */}
+              <div className="h-[200px] w-full bg-[#010409] relative overflow-hidden border-b border-white/5">
+                <img
+                  src={project.repo ? `https://opengraph.githubassets.com/1/balavignesh16/${project.repo}` : project.imageFallback}
+                  alt={project.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+              </div>
+
+              {/* Content Wrapper */}
+              <div className="p-6 flex flex-col flex-grow">
+                <div className="flex justify-between items-start mb-3">
+                  <h2 className="text-xl font-semibold text-zinc-100 group-hover:text-amber-400 transition-colors line-clamp-1 pr-4">
+                    {project.title}
+                  </h2>
+                </div>
+
+                <p className="text-sm text-zinc-400 leading-relaxed mb-6 line-clamp-3">
+                  {project.description}
+                </p>
+
+                {/* Tech Stack Tags at bottom */}
+                <div className="mt-auto flex flex-wrap gap-2 pt-4 border-t border-white/5">
+                  {project.stack.slice(0, 3).map(tech => (
+                    <span key={tech} className="px-2.5 py-1 bg-white/5 border border-white/5 rounded-md text-[11px] font-medium text-zinc-300">
+                      {tech}
+                    </span>
+                  ))}
+                  {project.stack.length > 3 && (
+                    <span className="px-2.5 py-1 bg-white/5 border border-white/5 rounded-md text-[11px] font-medium text-zinc-500">
+                      +{project.stack.length - 3}
+                    </span>
+                  )}
+                </div>
+              </div>
+            </motion.div>
+          ))}
         </motion.div>
       </motion.div>
 
