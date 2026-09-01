@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Bala Vignesh R | Full Stack Developer",
+  title: "Bala Vignesh R",
   description: "Portfolio of Bala Vignesh R, a Full Stack Developer specializing in Go, Java, Python, React, and System Design.",
 };
 
