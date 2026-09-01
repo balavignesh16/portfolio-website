@@ -99,33 +99,39 @@ export default function Projects() {
     {
       title: "Atlas",
       repo: "atlas",
-      stack: ["In Progress"],
+      stack: ["React", "TypeScript", "Node.js", "Docker", "In Progress"],
       github: "https://github.com/balavignesh16/atlas",
-      description: "Currently in development.",
+      description: "A highly scalable distributed orchestration system designed for seamless deployment and resource management.",
       fullDescription: [
-        "This project is currently under active development."
+        "Architecting a scalable distributed orchestration engine for automated deployment.",
+        "Building a unified dashboard using React and TypeScript for real-time cluster monitoring.",
+        "Currently implementing secure container isolation and auto-scaling mechanisms."
       ],
       imageFallback: "https://images.unsplash.com/photo-1618477247222-ac60c8856bbd?q=80&w=800&auto=format&fit=crop"
     },
     {
       title: "Nexus",
       repo: "nexus",
-      stack: ["In Progress"],
+      stack: ["Go", "gRPC", "Redis", "Kafka", "In Progress"],
       github: "https://github.com/balavignesh16/nexus",
-      description: "Currently in development.",
+      description: "A high-performance API gateway and microservices communication hub facilitating secure and fast data exchange.",
       fullDescription: [
-        "This project is currently under active development."
+        "Developing a high-throughput microservices hub written in Go leveraging gRPC for fast RPC calls.",
+        "Integrating Redis and Kafka to build robust real-time event streaming and caching layers.",
+        "Currently focusing on improving request routing efficiency and implementing robust rate-limiting."
       ],
       imageFallback: "https://images.unsplash.com/photo-1618477247222-ac60c8856bbd?q=80&w=800&auto=format&fit=crop"
     },
     {
       title: "Last Mile Delivery Tracker",
       repo: "last-mile-delivery-tracker",
-      stack: ["In Progress"],
+      stack: ["Flutter", "Firebase", "Google Maps API", "In Progress"],
       github: "https://github.com/balavignesh16/last-mile-delivery-tracker",
-      description: "Tracking solution for last mile delivery operations.",
+      description: "A real-time logistics platform for tracking last-mile delivery operations with dynamic route optimization.",
       fullDescription: [
-        "This project is currently under active development."
+        "Building a cross-platform mobile application using Flutter for real-time delivery tracking.",
+        "Integrating Google Maps API and Firebase for live location updates and route optimization.",
+        "Currently working on driver state management and seamless notification handling."
       ],
       imageFallback: "https://images.unsplash.com/photo-1618477247222-ac60c8856bbd?q=80&w=800&auto=format&fit=crop"
     }
@@ -137,8 +143,69 @@ export default function Projects() {
         initial="hidden" animate="visible" variants={stagger}
         className="max-w-6xl mx-auto flex flex-col items-center px-4 relative"
       >
+        {/* Header Section for In Progress */}
+        <motion.div variants={fadeUp} className="flex flex-col items-center text-center mb-12 w-full">
+          <div className="flex items-center gap-4 mb-2">
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white">
+              In Progress / Currently Working
+            </h2>
+          </div>
+          <p className="max-w-2xl text-zinc-400 text-base leading-relaxed">
+            Projects that are currently under active development.
+          </p>
+        </motion.div>
+
+        {/* Grid Section for In Progress */}
+        <motion.div variants={stagger} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+          {inProgressProjects.map((project, idx) => (
+            <motion.div
+              key={`in-progress-${idx}`}
+              variants={fadeUp}
+              onClick={() => setSelectedProject(project)}
+              className="flex flex-col bg-[#0d1117] border border-white/10 rounded-2xl overflow-hidden hover:border-amber-500/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-amber-500/10 cursor-pointer group"
+            >
+              {/* GitHub Open Graph Image Wrapper */}
+              <div className="h-[200px] w-full bg-[#010409] relative overflow-hidden border-b border-white/5">
+                <img
+                  src={project.repo ? `https://opengraph.githubassets.com/1/balavignesh16/${project.repo}` : project.imageFallback}
+                  alt={project.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+              </div>
+
+              {/* Content Wrapper */}
+              <div className="p-6 flex flex-col flex-grow">
+                <div className="flex justify-between items-start mb-3">
+                  <h2 className="text-xl font-semibold text-zinc-100 group-hover:text-amber-400 transition-colors line-clamp-1 pr-4">
+                    {project.title}
+                  </h2>
+                </div>
+
+                <p className="text-sm text-zinc-400 leading-relaxed mb-6 line-clamp-3">
+                  {project.description}
+                </p>
+
+                {/* Tech Stack Tags at bottom */}
+                <div className="mt-auto flex flex-wrap gap-2 pt-4 border-t border-white/5">
+                  {project.stack.slice(0, 3).map(tech => (
+                    <span key={tech} className="px-2.5 py-1 bg-white/5 border border-white/5 rounded-md text-[11px] font-medium text-zinc-300">
+                      {tech}
+                    </span>
+                  ))}
+                  {project.stack.length > 3 && (
+                    <span className="px-2.5 py-1 bg-white/5 border border-white/5 rounded-md text-[11px] font-medium text-zinc-500">
+                      +{project.stack.length - 3}
+                    </span>
+                  )}
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+
         {/* Header Section */}
-        <motion.div variants={fadeUp} className="flex flex-col items-center text-center mb-12">
+        <motion.div variants={fadeUp} className="flex flex-col items-center text-center mt-24 mb-12">
           <div className="flex flex-col sm:flex-row items-center gap-5 mb-6">
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-white">
               Selected Engineering Projects
@@ -221,67 +288,6 @@ export default function Projects() {
           ))}
 
 
-        </motion.div>
-
-        {/* Header Section for In Progress */}
-        <motion.div variants={fadeUp} className="flex flex-col items-center text-center mt-24 mb-12 w-full">
-          <div className="flex items-center gap-4 mb-2">
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white">
-              In Progress / Currently Working
-            </h2>
-          </div>
-          <p className="max-w-2xl text-zinc-400 text-base leading-relaxed">
-            Projects that are currently under active development.
-          </p>
-        </motion.div>
-
-        {/* Grid Section for In Progress */}
-        <motion.div variants={stagger} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
-          {inProgressProjects.map((project, idx) => (
-            <motion.div
-              key={`in-progress-${idx}`}
-              variants={fadeUp}
-              onClick={() => setSelectedProject(project)}
-              className="flex flex-col bg-[#0d1117] border border-white/10 rounded-2xl overflow-hidden hover:border-amber-500/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-amber-500/10 cursor-pointer group"
-            >
-              {/* GitHub Open Graph Image Wrapper */}
-              <div className="h-[200px] w-full bg-[#010409] relative overflow-hidden border-b border-white/5">
-                <img
-                  src={project.repo ? `https://opengraph.githubassets.com/1/balavignesh16/${project.repo}` : project.imageFallback}
-                  alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  loading="lazy"
-                />
-              </div>
-
-              {/* Content Wrapper */}
-              <div className="p-6 flex flex-col flex-grow">
-                <div className="flex justify-between items-start mb-3">
-                  <h2 className="text-xl font-semibold text-zinc-100 group-hover:text-amber-400 transition-colors line-clamp-1 pr-4">
-                    {project.title}
-                  </h2>
-                </div>
-
-                <p className="text-sm text-zinc-400 leading-relaxed mb-6 line-clamp-3">
-                  {project.description}
-                </p>
-
-                {/* Tech Stack Tags at bottom */}
-                <div className="mt-auto flex flex-wrap gap-2 pt-4 border-t border-white/5">
-                  {project.stack.slice(0, 3).map(tech => (
-                    <span key={tech} className="px-2.5 py-1 bg-white/5 border border-white/5 rounded-md text-[11px] font-medium text-zinc-300">
-                      {tech}
-                    </span>
-                  ))}
-                  {project.stack.length > 3 && (
-                    <span className="px-2.5 py-1 bg-white/5 border border-white/5 rounded-md text-[11px] font-medium text-zinc-500">
-                      +{project.stack.length - 3}
-                    </span>
-                  )}
-                </div>
-              </div>
-            </motion.div>
-          ))}
         </motion.div>
       </motion.div>
 

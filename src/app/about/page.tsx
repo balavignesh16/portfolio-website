@@ -28,9 +28,9 @@ export default function About() {
   return (
     <div className="max-w-7xl mx-auto px-4 py-24 sm:px-6 lg:px-8">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
-        
+
         {/* Left Sidebar (Sticky) */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
@@ -38,7 +38,7 @@ export default function About() {
         >
           {/* Avatar Profile Picture */}
           <div className="w-full aspect-square max-w-[280px] rounded-[2rem] overflow-hidden relative shadow-[0_0_40px_rgba(245,158,11,0.15)] group border border-white/10 bg-zinc-900/50">
-            <Image 
+            <Image
               src="/profilepicture.png"
               alt="Bala Vignesh R"
               fill
@@ -52,7 +52,7 @@ export default function About() {
               My Journey in <br />
               <span className="text-amber-500">Software Engineering</span>
             </h1>
-            <p className="text-zinc-400 text-lg">Bala Vignesh R | Backend & Security</p>
+            <p className="text-zinc-400 text-lg">Bala Vignesh R</p>
           </div>
 
           <div className="flex gap-4 pt-4 border-t border-white/5">
@@ -72,13 +72,13 @@ export default function About() {
         </motion.div>
 
         {/* Right Content */}
-        <motion.div 
+        <motion.div
           initial="hidden" animate="visible" variants={stagger}
           className="lg:col-span-8 space-y-16"
         >
           {/* Detailed Bio Sections */}
           <motion.section variants={fadeUp} className="space-y-12 bg-zinc-900/30 p-8 sm:p-10 rounded-[2rem] border border-white/5 backdrop-blur-sm">
-            
+
             <div className="space-y-6 text-zinc-300 leading-relaxed text-lg">
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">Hi, I'm Bala Vignesh R</h2>
               <p>
