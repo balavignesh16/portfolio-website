@@ -99,39 +99,39 @@ export default function Projects() {
     {
       title: "Atlas",
       repo: "atlas",
-      stack: ["React", "TypeScript", "Node.js", "Docker", "In Progress"],
+      stack: ["Java", "Spring Boot", "Go", "Docker", "PostgreSQL", "In Progress"],
       github: "https://github.com/balavignesh16/atlas",
-      description: "A highly scalable distributed orchestration system designed for seamless deployment and resource management.",
+      description: "A distributed backend intelligence and reliability platform to observe services, understand dependencies, and detect incidents.",
       fullDescription: [
-        "Architecting a scalable distributed orchestration engine for automated deployment.",
-        "Building a unified dashboard using React and TypeScript for real-time cluster monitoring.",
-        "Currently implementing secure container isolation and auto-scaling mechanisms."
+        "Developing a distributed backend intelligence and reliability platform to observe backend services, understand dependencies, and detect incidents.",
+        "Built using a microservices architecture with a Java Spring Boot control plane and a Go-based intelligence engine.",
+        "Currently establishing the foundational Monorepo structure, Docker setup, and robust CI/CD conventions."
       ],
       imageFallback: "https://images.unsplash.com/photo-1618477247222-ac60c8856bbd?q=80&w=800&auto=format&fit=crop"
     },
     {
       title: "Nexus",
       repo: "nexus",
-      stack: ["Go", "gRPC", "Redis", "Kafka", "In Progress"],
+      stack: ["Java", "Spring Boot", "React", "TypeScript", "MQTT", "PostgreSQL", "In Progress"],
       github: "https://github.com/balavignesh16/nexus",
-      description: "A high-performance API gateway and microservices communication hub facilitating secure and fast data exchange.",
+      description: "The Physical Intelligence Framework for transforming physical-world telemetry into contextual intelligence.",
       fullDescription: [
-        "Developing a high-throughput microservices hub written in Go leveraging gRPC for fast RPC calls.",
-        "Integrating Redis and Kafka to build robust real-time event streaming and caching layers.",
-        "Currently focusing on improving request routing efficiency and implementing robust rate-limiting."
+        "Building a framework transforming physical-world telemetry into intelligence via a Sense-Connect-Understand-Decide-Act-Learn loop.",
+        "Built as a modular monolith backend in Java/Spring Boot with a React/TypeScript Single Page Application frontend.",
+        "Currently stabilizing the Realtime Platform (F7) integrating MQTT, WebSockets, and React Query."
       ],
       imageFallback: "https://images.unsplash.com/photo-1618477247222-ac60c8856bbd?q=80&w=800&auto=format&fit=crop"
     },
     {
-      title: "Last Mile Delivery Tracker",
+      title: "Last-Mile Delivery Tracker",
       repo: "last-mile-delivery-tracker",
-      stack: ["Flutter", "Firebase", "Google Maps API", "In Progress"],
+      stack: ["Go", "PostgreSQL", "React", "TypeScript", "Tailwind CSS", "In Progress"],
       github: "https://github.com/balavignesh16/last-mile-delivery-tracker",
-      description: "A real-time logistics platform for tracking last-mile delivery operations with dynamic route optimization.",
+      description: "A delivery management platform for automated order assignment, volumetric rate calculation, and real-time customer notifications.",
       fullDescription: [
-        "Building a cross-platform mobile application using Flutter for real-time delivery tracking.",
-        "Integrating Google Maps API and Firebase for live location updates and route optimization.",
-        "Currently working on driver state management and seamless notification handling."
+        "A full-stack delivery platform featuring automated agent assignment and dynamic volumetric rate calculations.",
+        "Built as a Go + PostgreSQL backend with a React + TypeScript frontend in a robust modular monolith architecture.",
+        "Implemented comprehensive real-time notifications, strict state machine logic, and role-based access control."
       ],
       imageFallback: "https://images.unsplash.com/photo-1618477247222-ac60c8856bbd?q=80&w=800&auto=format&fit=crop"
     }
